@@ -1,7 +1,11 @@
-<!doctype html>
+<?php
 
+use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
+
+?>
 <?php $this->beginPage(); ?>
-
+<!doctype html>
 <html lang="en">
 
     <head>
@@ -16,15 +20,21 @@
     <body>
         <?php $this->beginBody(); ?>
         <?php
-            \yii\bootstrap\NavBar::begin([
+            NavBar::begin([
                 'brandLabel' => 'TWYW',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-default navbar-fixed-top'
                 ]
             ]);
-
-            \yii\bootstrap\NavBar::end();
+            echo Nav::widget([
+                'options' => ['class' => 'navbar-nav navbar-right'] ,
+                'items' => [
+                    ['label' => 'Join', 'url' => ['/site/join']],
+                    ['label' => 'Login', 'url' => ['/site/login']]
+                ]
+            ]);
+            NavBar::end();
         ?>
         <div class="container" style="margin-top: 60px">
             <?= $content ?>
