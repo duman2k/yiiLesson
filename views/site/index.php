@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 
 $this->title = 'Video School';
+
 ?>
 
 <div class="site-index">
@@ -10,3 +11,4 @@ $this->title = 'Video School';
 
     Welcome to the Video Paradise :)
 </div>
+

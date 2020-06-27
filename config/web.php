@@ -1,8 +1,8 @@
 <?php
 
-    $config = [
-            'id' => 'video',
-            'basePath' => realpath(__DIR__.'/../')
-    ];
+$config = [
+    'id' => 'video',
+    'basePath' => realpath(__DIR__.'/../')
+];
 
-    return $config;
+return $config;
